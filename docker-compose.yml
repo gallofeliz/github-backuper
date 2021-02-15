@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  backup:
+    #restart: unless-stopped
+    build:
+      context: .
+    #user: "1000"
+    volumes:
+      - /tmp/backup_github_test:/backup
+    env_file:
+     - .env
+    environment:
+      - SCHEDULE=*/10 * * * *
+      #- USER=xxx
+      #- TOKEN=xxx
