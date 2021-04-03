@@ -1,8 +1,8 @@
 FROM python:alpine
 
-RUN pip install croniter github-backup
-
 RUN apk add --no-cache git
+
+RUN pip install croniter github-backup git+https://github.com/gallofeliz/python-gallocloud-utils
 
 VOLUME /backup
 

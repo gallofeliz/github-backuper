@@ -7,9 +7,9 @@ services:
     #user: "1000"
     volumes:
       - /tmp/backup_github_test:/backup
-    env_file:
-     - .env
+    # env_file:
+    #  - .env
     environment:
-      - SCHEDULE=*/10 * * * *
-      #- USER=xxx
-      #- TOKEN=xxx
+      - SCHEDULE=12h
+      - GITHUB_USER=${GITHUB_USER}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
