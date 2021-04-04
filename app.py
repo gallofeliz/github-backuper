@@ -31,9 +31,6 @@ def backup():
         repositories = filter_repositories(args, repositories)
         backup_repositories(args, args.output_directory, repositories)
         backup_account(args, args.output_directory)
-        f = open("/backup/.github-backup", "w")
-        f.write(datetime.now().isoformat() + '\n')
-        f.close()
         logger.info('Backup succeeded', extra={'status': 'success'})
     except Exception as e:
         logger.exception('Backup failed', extra={'status': 'failure'})
