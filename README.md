@@ -1,5 +1,6 @@
 # github-backuper
 
-Backup github.
+Backup github, with schedule or by trigger.
 
-Why not later : create http entrypoint to receive github triggers and backup 1 repository (or everything) immediatly after github changes.
+- set TRIGGER_PORT to enable TRIGGER http mode
+- set SCHEDULE to enable SCHEDULING (1h, 1d, or a cron)
