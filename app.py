@@ -26,6 +26,7 @@ def backup(raise_on_error=False):
         args.private = True
         args.fork = True
         args.bare_clone = True
+        args.organization = config['github']['organization'] == True
         authenticated_user = get_authenticated_user(args)
         repositories = retrieve_repositories(args, authenticated_user)
         repositories = filter_repositories(args, repositories)
