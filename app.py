@@ -19,7 +19,7 @@ def backup(raise_on_error=False):
     logger.info('Starting backup', extra={'action': 'backup', 'status': 'starting'})
     try:
         args = parse_args()
-        args.token = config['github']['token']
+        args.token_classic = config['github']['token']
         args.user = config['github']['user']
         args.output_directory = config.get('destination', '/backup')
         args.include_repository = True
